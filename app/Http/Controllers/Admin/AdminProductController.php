@@ -13,7 +13,10 @@ class AdminProductController extends Controller
 
     public function __construct() {
 
-        $this->middleware('auth');
+        $this->middleware([
+            'auth',
+            'roles:Admin,Vendedor'
+        ]);
     }
     /**
      * Display a listing of the resource.

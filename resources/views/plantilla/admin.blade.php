@@ -136,13 +136,13 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="http://127.0.0.1:8000/adminlte/index3.html" class="brand-link">
+    {{--  <a href="http://127.0.0.1:8000/adminlte/index3.html" class="brand-link">
       <img src="http://127.0.0.1:8000/adminlte/dist/img/AdminLTELogo.png"
            alt="Tienda369"
-           class="brand-image img-circle elevation-3"
+           class="brand-image img-circle elevation-2"
            style="opacity: .8">
       <span class="brand-text font-weight-light">Tienda369</span>
-    </a>
+    </a>  --}}
 
     <!-- Sidebar -->
     <div class="sidebar">
@@ -171,11 +171,19 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
+                <a href="{{ url('/admin') }}" class="nav-link">
+                  <i class="fas fa-pager nav-icon"></i>
+                  <p>Pagina Admin</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
                 <a href="{{ url('/') }}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-pager nav-icon"></i>
                   <p>pagina de inicio</p>
                 </a>
               </li>
+
             </ul>
           </li>
 
@@ -185,7 +193,7 @@
                
           <li class="nav-item has-treeview">
                 <a href="#" class="nav-link">
-                  <i class="nav-icon fas fa-list-alt"></i>
+                  <i class="fas fa-newspaper nav-icon"></i>
                   <p>
                     Categorías
                     <i class="right fas fa-angle-left"></i>
@@ -194,17 +202,17 @@
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
                     <a href="{{ route('admin.category.index')}}" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
+                      <i class="nav-icon fas fa-list-alt"></i>
                       <p>Listado de Categorías</p>
                     </a>
                   </li>
-                  <li class="nav-item">
+                  {{--  <li class="nav-item">
                     <a href="{{ route('admin.category.create')}}" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Crear categoría</p>
                     </a>
                   </li>
-                 
+                   --}}
                 </ul>
               </li>
        
@@ -213,7 +221,7 @@
         
               <li class="nav-item has-treeview">
           <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-list-alt"></i>
+            <i class="nav-icon fab fa-product-hunt"></i>
             <p>
               Productos
               <i class="right fas fa-angle-left"></i>
@@ -222,16 +230,16 @@
           <ul class="nav nav-treeview">
             <li class="nav-item">
               <a href="{{ route('admin.product.index')}}" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
+                <i class="far fa-newspaper nav-icon"></i>
                 <p>Listado de Productos</p>
               </a>
             </li>
-            <li class="nav-item">
+            {{--  <li class="nav-item">
               <a href="{{ route('admin.product.create')}}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Crear Productos</p>
               </a>
-            </li>
+            </li>  --}}
           
           </ul>
         </li>
@@ -245,7 +253,7 @@
             
         <li class="nav-item has-treeview">
           <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-list-alt"></i>
+            <i class="fas fa-users nav-icon"></i>
             <p>
               Usuarios
               <i class="right fas fa-angle-left"></i>
@@ -254,7 +262,7 @@
           <ul class="nav nav-treeview">
             <li class="nav-item">
               <a href="{{ route('admin.user.index')}}" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
+                <i class="far fa-id-card nav-icon"></i>
                 <p>Listado de Usuarios</p>
               </a>
             </li>

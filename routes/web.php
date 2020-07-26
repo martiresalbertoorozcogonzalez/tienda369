@@ -1,44 +1,18 @@
 <?php
 
+// Rutas para pruebas
+
 Route::get('/prueba','PruebaController@prueba')->name('prueba');
     
 Route::get('/resultados','PruebaController@resultados')->name('resultados');
 
-Route::get('/', function () {
 
-/*$prod= Product::findOrFail(2);
+//Rutas Front
 
-$prod->slug= 'producto-3';
-
-$prod->save();
-
-return $prod;
-*/
-/*$prod = new Product();
-$prod->nombre = 'Producto 3';
-$prod->slug = 'Producto 3';
-$prod->category_id = 2;
-$prod->descripcion_corta = 'Producto ';
-$prod->descripcion_larga = 'Producto ';
-$prod->especificaciones = 'Producto ';
-$prod->datos_de_interes = 'Producto ';
-$prod->estado = 'Nuevo';
-$prod->activo = 'Si';
-$prod->sliderprincipal = 'No'; 
-$prod->save();
-return $prod;
-*/
-    //return view('welcome');
+Route::get('/','TiendaController@index')->name('tienda');
 
 
-/*$cat = Category::find(1)->products;
-
-return $cat;
-*/
-
-return view('tienda.index');
-});
-
+//Rutas Admin
 
 Auth::routes();
 
@@ -55,6 +29,8 @@ Route::get('cancelar/{ruta}', function($ruta) {
 })->name('cancelar');
 
 
+
+// Crear usuarios
 
 // App\User::create([
 //    'name' => 'Irene Alburez',

@@ -805,11 +805,18 @@ section
 {
 	overflow: hidden;
 	border-radius: 3px;
+	text-align: center;
 }
 .product
 {
 	margin-bottom: 30px;
 }
+
+.procuct_precio_actual
+{
+ color: red;
+}
+
 .product.home_item_large
 {
 	margin-bottom: 0;
@@ -880,7 +887,7 @@ section
 .product_name a:hover,
 .product_category a:hover
 {
-	color: #2fce98;
+	color:red;
 }
 .home_item_large .product_name a,
 .home_item_large .product_category,
